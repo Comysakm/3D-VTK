@@ -1,5 +1,1 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+项目主要用到的功能包含在ChoseRangePlyViewer和SliceViewer组件，其余的仅作参考，Viewer3D是最基础的功能，直接加载vti文件并渲染，可以从这个组件开始学习。
