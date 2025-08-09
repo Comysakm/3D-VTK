@@ -62,15 +62,5 @@ POST /generate-vtp  # vtp_verts_service.py (VTP.gz: Points+ScalarValue+Verts)
 POST /save-log      # vtp_verts_service.py (保存日志)
 POST /generate-vti  # vti_volume_service.py (VTI.gz: 规则体数据)
 
-⚙️ 运行环境
-
-Python 3.x
-依赖：Flask, flask_cors, numpy, plyfile, matplotlib, vtk, numba
-数据源：Saltf（大端 float32，210×676×676）
-
-📈 性能与日志
-
-VTP/VTI 使用二进制 + gzip 压缩，记录耗时与压缩比。
-vti_volume_service.py 使用 Numba 加速阈值处理，线程封装写出。
 
 
