@@ -45,6 +45,20 @@
   **输出**：pointcloud.vti.gz  
   **用途**：体渲染/切片/等值面
 
+## 📂 目录结构
+```text
+backend/
+├─ pointcloud_service.py              # PLY：几何渲染（x,y,z,scalar）
+├─ pointcloud_colormap_service.py     # PLY：顶点RGB（colormap）
+├─ vtp_verts_service.py               # VTP.gz：Points+ScalarValue+Verts，含 /save-log
+├─ vti_volume_service.py              # VTI.gz：规则体+Numba+线程封装压缩
+├─ Saltf                              # 数据源（大端 float32，210×676×676）
+└─ log/
+   ├─ pointcloud_with_verts.log       # vtp_verts_service.py 运行日志
+   ├─ pointcloud_optimized.log        # vti_volume_service.py 运行日志（UTF-8）
+   └─ frontend_logs/                  # 前端渲染日志（/save-log 落盘）
+```
+
 ## 🗃️ 数据格式差异
 
 | 格式 | 本质             | 典型内容                  | 前端场景            | 体量/性能             | 标量可读 |
@@ -61,6 +75,19 @@ POST /generate-ply  # pointcloud_colormap_service.py (PLY: x,y,z,RGB)
 POST /generate-vtp  # vtp_verts_service.py (VTP.gz: Points+ScalarValue+Verts)
 POST /save-log      # vtp_verts_service.py (保存日志)
 POST /generate-vti  # vti_volume_service.py (VTI.gz: 规则体数据)
+```
+
+## ⚙️ 运行环境
+
+- Python 3.x
+- 依赖：Flask, flask_cors, numpy, plyfile, matplotlib, vtk, numba
+- 数据源：Saltf（大端 float32，210×676×676）
+
+
+## 📈 性能与日志
+
+- VTP/VTI 使用二进制 + gzip 压缩，记录耗时与压缩比。
+- vti_volume_service.py 使用 Numba 加速阈值处理，线程封装写出。
 
 
 
