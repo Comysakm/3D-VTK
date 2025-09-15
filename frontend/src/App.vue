@@ -6,7 +6,10 @@
   <!-- <PlyViewer /> -->
     <!-- <ScalarRangePointCloud /> -->
   <!-- <ChoseRangePlyViewer /> -->
-   <DiffCubeViewer />
+   <!-- <DiffCubeViewer /> -->
+    <!-- <OctreeViewer/> -->
+  <!-- <OctreeByApiViewer/> -->
+   <MultiModelViewer/>
 </template>
 
 <script setup>
@@ -22,5 +25,7 @@ import ChoseRangeVtpGlyphViewer from './components/ChoseRangeVtpGlyphViewer.vue'
 import ChoseRangeVtiViewer from './components/ChoseRangeVtiViewer.vue';
 import ChoseRangeVtpViewer from './components/ChoseRangeVtpViewer.vue';
 import DiffCubeViewer from './components/DiffCubeViewer.vue';
-
+import OctreeViewer from './components/OctreeViewer.vue';
+// import OctreeByApiViewer from './components/OctreeByApiViewer.vue';
+import MultiModelViewer from './components/MultiModelViewer.vue';
 </script>
