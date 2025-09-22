@@ -9,7 +9,8 @@
    <!-- <DiffCubeViewer /> -->
     <!-- <OctreeViewer/> -->
   <!-- <OctreeByApiViewer/> -->
-   <MultiModelViewer/>
+   <!-- <MultiModelViewer/> -->
+    <OctreeBinViewer/>
 </template>
 
 <script setup>
@@ -28,4 +29,5 @@ import DiffCubeViewer from './components/DiffCubeViewer.vue';
 import OctreeViewer from './components/OctreeViewer.vue';
 // import OctreeByApiViewer from './components/OctreeByApiViewer.vue';
 import MultiModelViewer from './components/MultiModelViewer.vue';
+import OctreeBinViewer from './components/OctreeBinViewer.vue';
 </script>
