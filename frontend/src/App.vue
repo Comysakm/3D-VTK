@@ -11,6 +11,8 @@
   <!-- <OctreeByApiViewer/> -->
    <!-- <MultiModelViewer/> -->
     <OctreeBinViewer/>
+    <!-- <PointOctreeviewer/> -->
+    <!-- <VtpPointViewer/> -->
 </template>
 
 <script setup>
@@ -30,4 +32,6 @@ import OctreeViewer from './components/OctreeViewer.vue';
 // import OctreeByApiViewer from './components/OctreeByApiViewer.vue';
 import MultiModelViewer from './components/MultiModelViewer.vue';
 import OctreeBinViewer from './components/OctreeBinViewer.vue';
+import PointOctreeviewer from './components/PointOctreeviewer.vue';
+import VtpPointViewer from './components/VtpPointViewer.vue';
 </script>
